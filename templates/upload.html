@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Câu Hỏi</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1>Thêm Câu Hỏi</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <label for="question">Câu hỏi:</label>
+        {{ form.question() }}
+        <br>
+        <label for="period">Thời kỳ:</label>
+        {{ form.period() }}
+        <br>
+        <label for="option_a">Đáp án A:</label>
+        {{ form.option_a() }}
+        <br>
+        <label for="option_b">Đáp án B:</label>
+        {{ form.option_b() }}
+        <br>
+        <label for="option_c">Đáp án C:</label>
+        {{ form.option_c() }}
+        <br>
+        <label for="option_d">Đáp án D:</label>
+        {{ form.option_d() }}
+        <br>
+        <label for="correct_option">Đáp án đúng:</label>
+        {{ form.correct_option() }}
+        <br>
+        <button type="submit">Thêm câu hỏi</button>
+    </form>
+    <br>
+    <a href="/view-questions">Xem danh sách câu hỏi</a>
+</body>
+</html>

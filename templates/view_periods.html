@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách Thời Kỳ</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1>Danh sách Thời Kỳ</h1>
+    <a href="/manage-periods">Thêm Thời Kỳ Mới</a>
+    <h2>Danh sách các thời kỳ:</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tên Thời Kỳ</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for period in periods %}
+            <tr>
+                <td>{{ period.name }}</td>
+                <td>
+                    <a href="{{ url_for('delete_period', period_id=period._id) }}" onclick="return confirm('Bạn có chắc chắn muốn xóa thời kỳ này?');">Xóa</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

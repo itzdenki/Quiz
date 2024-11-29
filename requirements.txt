@@ -1,0 +1,6 @@
+Flask
+Flask-WTF
+Flask-Cors
+pymongo
+python-dotenv
+python-docx

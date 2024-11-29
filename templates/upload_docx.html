@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Câu Hỏi từ File DOCX</title>
+</head>
+<body>
+    <h1>Upload Câu Hỏi từ file .docx</h1>
+
+    <form action="/upload-docx" method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }} <!-- Thêm CSRF token -->
+        <label for="file">Chọn file .docx:</label>
+        <input type="file" name="file" id="file" required><br><br>
+
+        <label for="period_id">Chọn Thời Kỳ:</label>
+        <select name="period_id" id="period_id">
+            {% for period in periods %}
+            <option value="{{ period._id }}">{{ period.name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <button type="submit">Tải lên</button>
+    </form>
+
+    {% if questions %}
+        <h2>Các Câu Hỏi trong File:</h2>
+        <form action="/add-question" method="POST">
+            {% for question in questions %}
+                <div>
+                    <p>{{ question.question }}</p>
+                    <label>A. <input type="radio" name="correct_option" value="A"> {{ question.options[0] }}</label><br>
+                    <label>B. <input type="radio" name="correct_option" value="B"> {{ question.options[1] }}</label><br>
+                    <label>C. <input type="radio" name="correct_option" value="C"> {{ question.options[2] }}</label><br>
+                    <label>D. <input type="radio" name="correct_option" value="D"> {{ question.options[3] }}</label><br><br>
+                    
+                    <input type="hidden" name="question" value="{{ question.question }}">
+                    <input type="hidden" name="option_a" value="{{ question.options[0] }}">
+                    <input type="hidden" name="option_b" value="{{ question.options[1] }}">
+                    <input type="hidden" name="option_c" value="{{ question.options[2] }}">
+                    <input type="hidden" name="option_d" value="{{ question.options[3] }}">
+                    <input type="hidden" name="period_id" value="{{ periods[0]._id }}">
+
+                    <button type="submit">Thêm Câu Hỏi</button>
+                </div>
+            {% endfor %}
+        </form>
+    {% endif %}
+</body>
+</html>
