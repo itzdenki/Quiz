@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách Câu Hỏi</title>
+    <title>Danh Sách Câu Hỏi</title>
 </head>
 <body>
-    <a href="/">Home</a>
-    <h1>Danh sách Câu Hỏi</h1>
-    <a href="/upload">Thêm Câu Hỏi Mới</a>
-    <h2>Danh sách các câu hỏi:</h2>
+    <h1>Danh Sách Câu Hỏi</h1>
     <table border="1">
         <thead>
             <tr>
@@ -34,7 +31,9 @@
                 <td>{{ question.options.D }}</td>
                 <td>{{ question.correct_option }}</td>
                 <td>
-                    <a href="{{ url_for('delete_question', question_id=question._id) }}" onclick="return confirm('Bạn có chắc chắn muốn xóa câu hỏi này?');">Xóa</a>
+                    <form method="POST" action="/delete-question/{{ question._id }}">
+                        <button type="submit">Xóa</button>
+                    </form>
                 </td>
             </tr>
             {% endfor %}

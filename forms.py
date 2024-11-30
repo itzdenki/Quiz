@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, SelectField, SubmitField
+from wtforms import StringField, SelectField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Length
 
 class QuestionForm(FlaskForm):
@@ -16,7 +16,6 @@ class QuestionForm(FlaskForm):
     )
     submit = SubmitField("Thêm câu hỏi")
 
-
 class PeriodForm(FlaskForm):
     name = StringField("Tên thời kỳ", validators=[DataRequired()])
-    submit = SubmitField("Thêm Thời Kỳ")
+    submit = SubmitField("Thêm thời kỳ")

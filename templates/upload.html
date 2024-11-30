@@ -6,34 +6,29 @@
     <title>Thêm Câu Hỏi</title>
 </head>
 <body>
-    <a href="/">Home</a>
     <h1>Thêm Câu Hỏi</h1>
+    
+    <!-- Hiển thị thông báo -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                <li style="color: green;">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
     <form method="POST">
         {{ form.hidden_tag() }}
-        <label for="question">Câu hỏi:</label>
-        {{ form.question() }}
-        <br>
-        <label for="period">Thời kỳ:</label>
-        {{ form.period() }}
-        <br>
-        <label for="option_a">Đáp án A:</label>
-        {{ form.option_a() }}
-        <br>
-        <label for="option_b">Đáp án B:</label>
-        {{ form.option_b() }}
-        <br>
-        <label for="option_c">Đáp án C:</label>
-        {{ form.option_c() }}
-        <br>
-        <label for="option_d">Đáp án D:</label>
-        {{ form.option_d() }}
-        <br>
-        <label for="correct_option">Đáp án đúng:</label>
-        {{ form.correct_option() }}
-        <br>
-        <button type="submit">Thêm câu hỏi</button>
+        {{ form.period.label }} {{ form.period() }} <br>
+        {{ form.question.label }} {{ form.question() }} <br>
+        {{ form.option_a.label }} {{ form.option_a() }} <br>
+        {{ form.option_b.label }} {{ form.option_b() }} <br>
+        {{ form.option_c.label }} {{ form.option_c() }} <br>
+        {{ form.option_d.label }} {{ form.option_d() }} <br>
+        {{ form.correct_option.label }} {{ form.correct_option() }} <br>
+        {{ form.submit() }}
     </form>
-    <br>
-    <a href="/view-questions">Xem danh sách câu hỏi</a>
 </body>
 </html>

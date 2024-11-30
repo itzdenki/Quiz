@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý thời kỳ</title>
+    <title>Quản Lý Thời Kỳ</title>
 </head>
 <body>
-    <a href="/">Home</a>
-    <h1>Quản lý Thời Kỳ</h1>
+    <h1>Quản Lý Thời Kỳ</h1>
     <form method="POST">
         {{ form.hidden_tag() }}
-        <label for="name">Tên thời kỳ:</label>
-        {{ form.name }}
-        <button type="submit">Thêm Thời Kỳ</button>
+        {{ form.name.label }} {{ form.name() }}
+        {{ form.submit() }}
     </form>
-    <a href="/view-periods">Xem danh sách thời kì</a>
-    <!-- <h2>Danh sách Thời Kỳ:</h2>
+    <h2>Danh Sách Thời Kỳ</h2>
     <ul>
         {% for period in periods %}
-        <li>{{ period.name }}</li>
+        <li>
+            {{ period.name }}
+            <form method="POST" action="/delete-period/{{ period._id }}" style="display:inline;">
+                <button type="submit">Xóa</button>
+            </form>
+        </li>
         {% endfor %}
-    </ul> -->
+    </ul>
 </body>
 </html>
