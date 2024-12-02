@@ -4,11 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Travel Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            color: #444;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #003366;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Time Travel Quiz</h1>
-    <a href="/upload">Thêm câu hỏi</a><br>
-    <a href="/view-questions">Xem danh sách câu hỏi</a><br>
-    <a href="/manage-periods">Quản lý thời kỳ</a>
+    <div class="container">
+        <h1>Time Travel Quiz</h1>
+        <p>Chào mừng bạn đến với ứng dụng quản lý câu hỏi lịch sử "Time Travel Quiz".</p>
+        <h2>Chức năng chính:</h2>
+        <ul>
+            <li>
+                <a href="/upload">Thêm câu hỏi thủ công</a> - Tạo và thêm câu hỏi trắc nghiệm vào hệ thống.
+            </li>
+            <li>
+                <a href="/view-questions">Xem danh sách câu hỏi</a> - Duyệt qua tất cả các câu hỏi trong cơ sở dữ liệu.
+            </li>
+            <li>
+                <a href="/manage-periods">Quản lý thời kỳ</a> - Thêm, sửa hoặc xóa thời kỳ.
+            </li>
+            <li>
+                <a href="/upload-csv">Upload câu hỏi từ file CSV</a> - Thêm nhiều câu hỏi cùng lúc bằng file CSV.
+            </li>
+            <li>
+                <a href="/generate-questions">Tạo câu hỏi tự động</a> - Sử dụng AI để tự động tạo câu hỏi cho một thời kỳ.
+            </li>
+            <li>
+                <a href="/api/questions" target="_blank">API: Xem câu hỏi dưới dạng JSON</a> - Truy cập dữ liệu câu hỏi dưới dạng JSON.
+            </li>
+            <li>
+                <a href="/api/periods" target="_blank">API: Xem thời kỳ dưới dạng JSON</a> - Truy cập dữ liệu thời kỳ dưới dạng JSON.
+            </li>
+        </ul>
+        <h2>Hướng dẫn sử dụng:</h2>
+        <ol>
+            <li>Chọn chức năng từ danh sách trên.</li>
+            <li>Làm theo các hướng dẫn trên mỗi trang để thêm, xem hoặc quản lý dữ liệu.</li>
+            <li>Sử dụng API để tích hợp dữ liệu vào ứng dụng khác.</li>
+        </ol>
+        <p><strong>Ghi chú:</strong> Vui lòng đảm bảo rằng dữ liệu thời kỳ đã được thêm trước khi tạo hoặc upload câu hỏi.</p>
+    </div>
 </body>
 </html>

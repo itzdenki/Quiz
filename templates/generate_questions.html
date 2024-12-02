@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Câu Hỏi Tự Động</title>
+</head>
+<body>
+    <h1>Tạo Câu Hỏi Tự Động</h1>
+
+    <!-- Hiển thị thông báo -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                <li style="color: green;" if category == "success">{{ message }}</li>
+                <li style="color: red;" if category == "error">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <label for="period_id">Thời kỳ:</label>
+        <select name="period_id" required>
+            <option value="">-- Chọn thời kỳ --</option>
+            {% for period in periods %}
+            <option value="{{ period._id }}">{{ period.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="num_questions">Số lượng câu hỏi:</label>
+        <input type="number" name="num_questions" min="1" required>
+        <br>
+        <button type="submit">Tạo Câu Hỏi</button>
+    </form>
+</body>
+</html>
