@@ -20,9 +20,9 @@ client = MongoClient(os.getenv("MONGO_URL"))
 db = client["time_travel_quiz"]
 questions_collection = db["questions"]
 periods_collection = db["periods"]
-
 # Cấu hình Google Generative AI
-genai.configure(os.getenv("api_key"))
+key = os.getenv("api_key")
+genai.configure(api_key=key)
 
 generation_config = {
     "temperature": 1,
@@ -136,7 +136,7 @@ def generate_questions():
                 continue
 
             # Tạm dừng giữa các câu hỏi
-            time.sleep(1)
+            # time.sleep(1)
 
         flash(f"{num_questions} câu hỏi đã được tạo và thêm vào MongoDB.", "success")
         return redirect(url_for("view_questions"))
