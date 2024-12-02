@@ -36,7 +36,7 @@ Time Travel Quiz giúp:
 1. **Clone hoặc tải mã nguồn về máy**:
    ```bash
    git clone https://github.com/itzdenki/Quiz.git
-   cd time-travel-quiz
+   cd Quiz
    ```
 
 2. **Tạo môi trường ảo (virtual environment)**:
@@ -78,9 +78,11 @@ Time Travel Quiz giúp:
      ```
      MONGO_URL=mongodb://localhost:27017/
      SECRET_KEY=your_secret_key_here
+     api_key=ABCDXYZ
      ```
    - **MONGO_URL**: Địa chỉ kết nối MongoDB.
    - **SECRET_KEY**: Một chuỗi bất kỳ để bảo mật ứng dụng Flask.
+   - **api_key**: API Key của Google Gemini.
 
 3. **Chạy ứng dụng Flask**:
    - Sau khi hoàn tất cài đặt, khởi chạy ứng dụng bằng lệnh:
@@ -155,10 +157,7 @@ Time Travel Quiz giúp:
      ```bash
      pip install google-generativeai
      ```
-   - Kiểm tra API Key đã cấu hình trong mã:
-     ```python
-     genai.configure(api_key="YOUR_API_KEY")
-     ```
+   - Kiểm tra API Key đã cấu hình trong file .env
 
 ---
 

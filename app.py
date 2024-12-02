@@ -22,7 +22,7 @@ questions_collection = db["questions"]
 periods_collection = db["periods"]
 
 # Cấu hình Google Generative AI
-genai.configure(api_key="AIzaSyBehj08D28PJAQ336By_Yhyj1ACYhhYD08")
+genai.configure(os.getenv("api_key"))
 
 generation_config = {
     "temperature": 1,
