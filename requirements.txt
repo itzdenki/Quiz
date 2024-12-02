@@ -4,3 +4,4 @@ Flask-Cors
 pymongo
 python-dotenv
 python-docx
+google-generativeai
