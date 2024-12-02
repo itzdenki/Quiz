@@ -35,7 +35,7 @@ Time Travel Quiz giúp:
 ### **2. Cài đặt**
 1. **Clone hoặc tải mã nguồn về máy**:
    ```bash
-   git clone https://github.com/itzdenki/Quiz.git
+   git clone -b api https://github.com/itzdenki/Quiz.git
    cd Quiz
    ```
 
