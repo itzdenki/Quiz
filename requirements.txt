@@ -5,3 +5,4 @@ pymongo
 python-dotenv
 python-docx
 google-generativeai
+csv
