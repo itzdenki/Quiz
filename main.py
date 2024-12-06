@@ -6,7 +6,7 @@ import requests
 import random
 
 # URL của API để lấy dữ liệu câu hỏi
-API_URL = "https://api.itzdenki.io.vn/api/questions"
+API_URL = "http://127.0.0.1:5000/api/questions"
 
 # Hàm lấy dữ liệu câu hỏi từ API
 def fetch_questions():
