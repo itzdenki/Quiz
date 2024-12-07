@@ -1,5 +1,7 @@
 # **Time Travel Quiz**
 
+[Link API DEMO](https://api.itzdenki.io.vn)
+
 ### **Mô tả sản phẩm**
 Time Travel Quiz là một ứng dụng quản lý câu hỏi trắc nghiệm lịch sử. Ứng dụng hỗ trợ các giáo viên, học sinh, hoặc người đam mê lịch sử tạo, quản lý và học các câu hỏi về các thời kỳ lịch sử khác nhau. Ngoài ra, ứng dụng tích hợp API AI để tự động tạo câu hỏi lịch sử và cho phép upload dữ liệu hàng loạt thông qua file CSV.
 
