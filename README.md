@@ -1,17 +1,9 @@
 # **Time Travel Quiz**
 
+[Link source code phần API](https://github.com/itzdenki/Quiz/tree/api)
+
 ### **Mô tả sản phẩm**
 Time Travel Quiz là một ứng dụng quản lý câu hỏi trắc nghiệm lịch sử. Ứng dụng hỗ trợ các giáo viên, học sinh, hoặc người đam mê lịch sử tạo, quản lý và học các câu hỏi về các thời kỳ lịch sử khác nhau. Ngoài ra, ứng dụng tích hợp API AI để tự động tạo câu hỏi lịch sử và cho phép upload dữ liệu hàng loạt thông qua file CSV.
-
----
-
-## **Các tính năng chính**
-1. **Thêm câu hỏi thủ công**: Tạo câu hỏi trắc nghiệm với các đáp án và thời kỳ liên quan.
-2. **Xem danh sách câu hỏi**: Duyệt qua toàn bộ câu hỏi hiện có trong cơ sở dữ liệu.
-3. **Quản lý thời kỳ**: Thêm, sửa hoặc xóa thời kỳ lịch sử.
-4. **Upload câu hỏi từ file CSV**: Dễ dàng thêm nhiều câu hỏi cùng lúc. (đang bảo trì)
-5. **Tạo câu hỏi tự động bằng AI**: Sử dụng Google Generative AI để tạo câu hỏi lịch sử tự động.
-6. **API hỗ trợ**: Truy cập câu hỏi và thời kỳ dưới dạng JSON.
 
 ---
 
@@ -27,7 +19,6 @@ Time Travel Quiz giúp:
 
 ### **1. Yêu cầu hệ thống**
 - **Python**: 3.8 trở lên
-- **MongoDB**: Cơ sở dữ liệu NoSQL để lưu trữ câu hỏi và thời kỳ
 - **Pip**: Trình quản lý thư viện Python
 
 ---
